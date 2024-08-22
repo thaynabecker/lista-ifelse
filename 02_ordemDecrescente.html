@@ -5,11 +5,17 @@
     */
 
     //ENTRADA
+    const primeiro = Number(prompt(`Informe um número:`));
+    const segundo = Number(prompt(`Informe um número:`));
+    const terceiro = Number(prompt(`Informe um número:`));
 
-    
     //PROCESSAMENTO
     
-
     //SAÍDA
-    
+    if (primeiro < segundo && segundo < terceiro && terceiro > segundo) {alert(`A ordem decrescente é ${terceiro}, ${segundo}, ${primeiro}.`)} 
+    else if(segundo < primeiro && primeiro < terceiro && terceiro > primeiro) {alert(`A ordem decrescente é ${terceiro}, ${primeiro}, ${segundo}.`)}
+    else if(terceiro < segundo && segundo < terceiro && primeiro > segundo) {`A ordem decrescente é ${primeiro}, ${segundo}, ${terceiro}.`}
+    else if(segundo < terceiro && terceiro < primeiro && primeiro > terceiro) {`A ordem decrescente é ${primeiro}, ${terceiro}, ${segundo}.`}
+    else if(terceiro < segundo && segundo < terceiro && primeiro > segundo) {`A ordem decrescente é ${segundo}, ${primeiro}, ${terceiro}.`}
+    else {alert(`A ordem decrescente é ${segundo}, ${terceiro}, ${primeiro}.`)}
 </script>
