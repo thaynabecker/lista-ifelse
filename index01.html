@@ -7,11 +7,17 @@
 
     //ENTRADA
     const primeiro = Number(prompt(`Informe um inteiro:`));
-
+    const segundo = Number(prompt(`Informe outro inteiro:`));
 
     //PROCESSAMENTO
-
+    let mudanca = primeiro;
+    primeiro = segundo; 
+    segundo = mudanca;
 
     //SAÍDA
-
+    if (primeiro == segundo) {
+        alert(`A troca não é necessária`)
+    } else {
+        alert(`Antes:${segundo} e Depois:${primeiro}, Antes:${primeiro} e Depois:${mudanca}`)
+    }
 </script>
