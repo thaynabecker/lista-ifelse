@@ -16,7 +16,7 @@
     } else if (valorSaque >= 10 && valorSaque < 600) {
         const notasde100 = Math.floor(valorSaque / 100);
         const notasde50 = Math.floor((valorSaque - (notasde100 * 100)) / 50);
-        const notasde10 = Math.floor((valorSaque - ((notasde100 * 100)) + (notasde50 * 50)) /10);
+        const notasde10 = Math.floor((valorSaque - ((notasde100 * 100) + (notasde50 * 50))) /10);
         const notasde5 = Math.floor((valorSaque - ((notasde100 * 100) + (notasde50 * 50) + (notasde10 * 10))) /5);
         const notasde1 = Math.floor((valorSaque - ((notasde100 * 100) + (notasde50 * 50) + (notasde10 * 10) + (notasde5 * 5))));
         alert(`Esse número tem ${notasde100} nota(s) de 100, ${notasde50} notas(s) de 50, ${notasde10} nota(s) de 10, ${notasde5} nota(s) de 5 e ${notasde1} nota(s) de 1.`)
