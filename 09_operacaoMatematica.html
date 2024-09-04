@@ -8,26 +8,61 @@
     */
 
     //ENTRADA
-    const primeiro =  Number(prompt(`Informe um número:`));
-    const segundo = Number(prompt(`Informe outro número:`));
-    const operacao = prompt(`Informe qual operação  básica você deseja realizar: (+, -, *, :)`);
+    let primeiro =  Number(prompt(`Informe um número:`));
+    let segundo = Number(prompt(`Informe outro número:`));
+    let operacao = prompt(`Informe qual operação  básica você deseja realizar: (+, -, *, /)`);
 
     //PROCESSAMENTO
-    if (operacao == "adição" || "+") {
-        const adicao = primeiro + segundo;
-   
-    } else if (operacao == "subtração" || "-") {
-        const subtração = primeiro - segundo;
-       
-    } else if (operacao == "multiplicação" || "*") {
-        const multiplicacao = primeiro * segundo;
-      
-    } else if (operacao == "divisão" || "/") {
-        const divisao = primeiro + segundo;
+    let resultado;
+
+    
+    //OPERAÇÕES
+    if (operacao == "+") {
+       resultado = primeiro + segundo;
+       fraseResultado = `A soma dos números é ${resultado}`;
+        
+    } else if (operacao == "-") {
+        resultado = primeiro - segundo;
+        fraseResultado = `A subtração dos números é ${resultado}.`;
+
+    } else if (operacao == "*") {
+        resultado = primeiro * segundo;
+        fraseResultado = `A multiplicação dos números é ${resultado}.`;
+
+    } else if (operacao == "/") {
+        resultado = (primeiro / segundo).toFixed(2);
+        fraseResultado = `A divisão dos números é ${resultado}.`;
+
+    } else {
+        alert(`Operação inválida!`);
+    }
+
+    //PAR OU ÍMPAR
+    if (resultado % 2 == 0) {
+        fraseParImpar = `O número é par!`; 
+
+    } else {
+        fraseParImpar = `O número é ímpar!`; 
 
     }
 
-    
+    //POSITIVO OU NEGATIVO
+    if (resultado >= 0) {
+        frasePosNeg = `O número é positivo!`;
+
+    } else {
+        frasePosNeg = `O número é negativo!`;
+    }
+
+    //INTEIRO OU DECIMAL
+    if (NUmber.isInteger(resultado) == true) {
+        fraseIntDec = `O número é inteiro!`;
+    } else {
+        fraseIntDec = `O número é decimal!`;
+    }
+
     //SAÍDA
+
+    document.write(fraseResultado + "Características do resultado:" + fraseParImpar + frasePosNeg + fraseIntDec);
 
 </script>
