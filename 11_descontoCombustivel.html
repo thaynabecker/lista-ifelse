@@ -14,11 +14,31 @@
     */
 
     //ENTRADA
+   let litros = Number(prompt("Informe o número de litros vendidos: "))
+   let tipo_combustivel = prompt("Informe o tipo de combustível (A-álcool, G-gasolina): ")
 
 
     //PROCESSAMENTO
+    if (tipo_combustivel == "A") {
+        const preco_litro = 6.10;
+        if (litros > 20) {
+            const desconto = 0.5;
+        } else {
+            const desconto = 0.3;
+        }
+    }
+    if (tipo_combustivel == "G") {
+        const preco_litro = 6.50;
+        if (litros > 20) {
+            const desconto = 0.6;
+        } else {
+            const desconto = 0.4;
+        }
+    }
+    let = litros * preco_litro
+    const valor_desconto = valor_total * desconto
+    const valor_pago = valor_total - valor_desconto
 
-    
     //SAÍDA
-
+    alert("O valor a ser pago pelo cliente é: ${valor_pago}");
 </script>
