@@ -14,31 +14,29 @@
     */
 
     //ENTRADA
-   let litros = Number(prompt("Informe o número de litros vendidos: "))
-   let tipo_combustivel = prompt("Informe o tipo de combustível (A-álcool, G-gasolina): ")
-
+    let litros = Number(prompt(`Informe quantos litros foram vendidos:`));
+    let tipoCombustivel = prompt(`Informe o tipo de combustível: (A-álcool, G-gasolina)`);
 
     //PROCESSAMENTO
-    if (tipo_combustivel == "A") {
-        const preco_litro = 6.10;
-        if (litros > 20) {
-            const desconto = 0.5;
-        } else {
-            const desconto = 0.3;
-        }
-    }
-    if (tipo_combustivel == "G") {
-        const preco_litro = 6.50;
-        if (litros > 20) {
-            const desconto = 0.6;
-        } else {
-            const desconto = 0.4;
-        }
-    }
-    let = litros * preco_litro
-    const valor_desconto = valor_total * desconto
-    const valor_pago = valor_total - valor_desconto
+    let desconto;
+    const valorAlcool = litros * 6.10;
+    const valorGasolina = litros * 6.50;
 
     //SAÍDA
-    alert("O valor a ser pago pelo cliente é: ${valor_pago}");
+    if (tipoCombustivel == "A" && litros <= 20) {
+        desconto = valorAlcool - (valorAlcool * 0.3);
+        alert(`Com 3% de desconto, você irá pagar ${desconto} reais.`);
+    } else if (tipoCombustivel == "A" && litros > 20) {
+        desconto = valorAlcool - (valorAlcool * 0.5);
+        alert(`Com 5% de desconto, você irá pagar ${desconto} reais.`);
+    } else if (tipoCombustivel == "G" && litros <= 20) {
+        desconto = valorGasolina - (valorGasolina * 0.4);
+        alert(`Com 4% de desconto, você irá pagar ${desconto} reais.`);
+    } else if (tipoCombustivel == "G" && litros > 20) {
+        desconto = valorGasolina - (valorGasolina * 0.6);
+        alert(`Com 6% de desconto, você irá pagar ${desconto} reais.`);
+    } else {
+        alert("Combustível inválido!");
+    }
+
 </script>
